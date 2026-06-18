@@ -1,10 +1,10 @@
 :root {
   --page: #101318;
   --page-text: #dce3ea;
-  --swatch-default: #3fb950;
-  --swatch-spooky: #bd93f9;
-  --swatch-light: #f4f6f8;
-  --swatch-earthy: #e66f2d;
+  --swatch-default: #238636;
+  --swatch-spooky: #ff79c6;
+  --swatch-earthy: #d65a31;
+  --swatch-light: #b9c1cb;
 
   color-scheme: dark;
   font-family: "Segoe UI", sans-serif;
@@ -155,11 +155,11 @@ main {
   background: var(--swatch-default);
 }
 
-.repo-pulse__swatch--magenta {
+.repo-pulse__swatch--spooky {
   background: var(--swatch-spooky);
 }
 
-.repo-pulse__swatch--yellow {
+.repo-pulse__swatch--light {
   background: var(--swatch-light);
 }
 
