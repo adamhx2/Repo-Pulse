@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RepoPulse Demo</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <main>
+      <h1>RepoPulse</h1>
+      <section class="demo-box" aria-label="RepoPulse widget demo">
+        <div class="repo-pulse">
+          <div class="repo-pulse__toolbar">
+            <span class="repo-pulse__brand">Repo Pulse</span>
+            <div class="repo-pulse__swatches" aria-label="Choose a color theme">
+              <button
+                class="repo-pulse__swatch repo-pulse__swatch--cyan"
+                type="button"
+                aria-label="Cyan theme"
+              ></button>
+              <button
+                class="repo-pulse__swatch repo-pulse__swatch--magenta"
+                type="button"
+                aria-label="Magenta theme"
+              ></button>
+              <button
+                class="repo-pulse__swatch repo-pulse__swatch--yellow"
+                type="button"
+                aria-label="Yellow theme"
+              ></button>
+              <button
+                class="repo-pulse__swatch repo-pulse__swatch--black"
+                type="button"
+                aria-label="Black theme"
+              ></button>
+            </div>
+          </div>
+
+          <article class="repo-pulse__content">
+            <header class="repo-pulse__header">
+              <div>
+                <span class="repo-pulse__label">Project pulse</span>
+                <h2>SchemaBind</h2>
+              </div>
+              <span class="repo-pulse__status">
+                <span class="repo-pulse__status-dot" aria-hidden="true"></span>
+                Active
+              </span>
+            </header>
+
+            <ul class="repo-pulse__updates">
+              <li class="repo-pulse__update-item">
+                <span>Improved CSV field handling.</span>
+                <time datetime="2026-06-15">Updated 2 days ago</time>
+              </li>
+              <li class="repo-pulse__update-item">
+                <span>Updated attribute access to use the new API.</span>
+                <time datetime="2026-06-14">Updated 3 days ago</time>
+              </li>
+            </ul>
+
+            <footer class="repo-pulse__footer">
+              <span>2 recent changes</span>
+              <a href="#"
+                >View on GitHub <span aria-hidden="true">&rarr;</span></a
+              >
+            </footer>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
