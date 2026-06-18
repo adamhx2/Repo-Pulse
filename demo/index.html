@@ -3,46 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RepoPulse Demo</title>
+    <title>RepoPulse Widget</title>
     <link rel="stylesheet" href="app.css" />
+    <script src="app.js" defer></script>
   </head>
   <body>
     <main>
-      <h1>RepoPulse</h1>
-      <section class="demo-box" aria-label="RepoPulse widget demo">
-        <div class="repo-pulse">
-          <div class="repo-pulse__toolbar">
-            <span class="repo-pulse__brand">Repo Pulse</span>
-            <div class="repo-pulse__swatches" aria-label="Choose a color theme">
-              <button
-                class="repo-pulse__swatch repo-pulse__swatch--cyan"
-                type="button"
-                aria-label="Cyan theme"
-              ></button>
-              <button
-                class="repo-pulse__swatch repo-pulse__swatch--magenta"
-                type="button"
-                aria-label="Magenta theme"
-              ></button>
-              <button
-                class="repo-pulse__swatch repo-pulse__swatch--yellow"
-                type="button"
-                aria-label="Yellow theme"
-              ></button>
-              <button
-                class="repo-pulse__swatch repo-pulse__swatch--black"
-                type="button"
-                aria-label="Black theme"
-              ></button>
-            </div>
+      <div class="repo-pulse" data-theme="default">
+        <div class="repo-pulse__toolbar">
+          <span class="repo-pulse__brand">Repo Pulse</span>
+          <div class="repo-pulse__swatches" aria-label="Choose a color theme">
+            <button
+              class="repo-pulse__swatch repo-pulse__swatch--default"
+              type="button"
+              data-theme="default"
+              aria-label="Default theme"
+              aria-pressed="true"
+            ></button>
+            <button
+              class="repo-pulse__swatch repo-pulse__swatch--magenta"
+              type="button"
+              data-theme="spooky"
+              aria-label="Spooky theme"
+              aria-pressed="false"
+            ></button>
+            <button
+              class="repo-pulse__swatch repo-pulse__swatch--earthy"
+              type="button"
+              data-theme="earthy"
+              aria-label="Earthy theme"
+              aria-pressed="false"
+            ></button>
+            <button
+              class="repo-pulse__swatch repo-pulse__swatch--yellow"
+              type="button"
+              data-theme="light"
+              aria-label="Light theme"
+              aria-pressed="false"
+            ></button>
           </div>
+        </div>
 
-          <article class="repo-pulse__content">
+        <article class="repo-pulse__content">
+          <div class="repo-pulse__project-panel">
             <header class="repo-pulse__header">
-              <div>
-                <span class="repo-pulse__label">Project pulse</span>
-                <h2>SchemaBind</h2>
-              </div>
+              <h2>SchemaBind</h2>
               <span class="repo-pulse__status">
                 <span class="repo-pulse__status-dot" aria-hidden="true"></span>
                 Active
@@ -58,17 +63,21 @@
                 <span>Updated attribute access to use the new API.</span>
                 <time datetime="2026-06-14">Updated 3 days ago</time>
               </li>
+              <li class="repo-pulse__update-item">
+                <span>Added clearer errors for missing fields.</span>
+                <time datetime="2026-06-12">Updated 5 days ago</time>
+              </li>
             </ul>
+          </div>
 
-            <footer class="repo-pulse__footer">
-              <span>2 recent changes</span>
-              <a href="#"
-                >View on GitHub <span aria-hidden="true">&rarr;</span></a
-              >
-            </footer>
-          </article>
-        </div>
-      </section>
+          <footer class="repo-pulse__footer">
+            <span>3 recent changes</span>
+            <a href="#"
+              >View on GitHub <span aria-hidden="true">&rarr;</span></a
+            >
+          </footer>
+        </article>
+      </div>
     </main>
   </body>
 </html>
